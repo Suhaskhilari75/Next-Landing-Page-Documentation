@@ -10,11 +10,11 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   const handleSearch=useDebouncedCallback((term:string)=>{
     console.log(`Searching... ${term}`);
-
     // URLSearchParams is a Web API that provides utility methods for manipulating the URL query parameters. 
     // Instead of creating a complex string literal, you can use it to get the params string like
     // ===> ?page=1&query=a.
     const params=new URLSearchParams (searchparams);
+    params.set('page', '1');
     term?params.set('query',term):params.delete('query')
     replace(`${pathname}?${params.toString()}`)
   },300)

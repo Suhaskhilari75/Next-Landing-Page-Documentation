@@ -7,7 +7,6 @@ export const metadata:Metadata={
 }
 import '@/app/ui/global.css'
 import {inter} from "@/app/ui/fonts"
-import { url } from 'inspector';
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +16,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`} >{children}</body>
     </html>
-    
+
   );
 }

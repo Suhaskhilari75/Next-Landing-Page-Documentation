@@ -5,8 +5,6 @@ import { z } from 'zod';
  import { User } from './app/lib/definitions';
  import { sql } from '@vercel/postgres';
  import bcrypt from 'bcrypt'
-import { promises } from 'dns';
-import { use } from 'react';
 
 async function getUser(email: string): Promise<User | undefined> {
     try {
